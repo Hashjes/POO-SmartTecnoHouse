@@ -8,6 +8,8 @@ import modelo.SmartTecnoHouse;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 /**
  * Vista principal de la aplicación Smart TecnoHouse.
@@ -120,6 +122,13 @@ public class MainFrame extends JFrame {
         cargarEstadoButton.addActionListener(e -> controlador.cargarEstado());
 
         actuadorCombo.addActionListener(e -> controlador.actualizarAccionesActuador());
+
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                controlador.guardarEstadoAlSalir();
+            }
+        });
     }
 
     /**

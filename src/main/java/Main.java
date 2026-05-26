@@ -17,7 +17,7 @@ public class Main {
      */
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            SmartTecnoHouse modelo = new SmartTecnoHouse();
+            SmartTecnoHouse modelo = SmartTecnoHouse.getInstancia();
             PersistenciaService persistenciaService = new PersistenciaService("data/state.json");
             MainFrame vista = new MainFrame();
 

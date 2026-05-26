@@ -12,6 +12,8 @@ import java.util.List;
  */
 public class SmartTecnoHouse {
 
+    private static SmartTecnoHouse instancia;
+
     private List<Sensor> sensores;
     private List<Actuador> actuadores;
     private List<Regla> reglas;
@@ -24,7 +26,7 @@ public class SmartTecnoHouse {
     /**
      * Crea el sistema domótico con sensores, actuadores y reglas iniciales.
      */
-    public SmartTecnoHouse() {
+    private SmartTecnoHouse() {
         sensores = new ArrayList<>();
         actuadores = new ArrayList<>();
         reglas = new ArrayList<>();
@@ -33,6 +35,20 @@ public class SmartTecnoHouse {
         inicializarSensores();
         inicializarActuadores();
         inicializarReglas();
+    }
+
+    /**
+     * Devuelve la instancia única del sistema domótico.
+     * Aplica el patrón Singleton sugerido para compartir un solo modelo principal.
+     *
+     * @return instancia única de SmartTecnoHouse.
+     */
+    public static synchronized SmartTecnoHouse getInstancia() {
+        if (instancia == null) {
+            instancia = new SmartTecnoHouse();
+        }
+
+        return instancia;
     }
 
     private void inicializarSensores() {
@@ -79,6 +95,18 @@ public class SmartTecnoHouse {
      */
     public List<Regla> getReglas() {
         return reglas;
+    }
+
+    /**
+     * Devuelve sensores y actuadores como una colección homogénea de dispositivos.
+     *
+     * @return lista polimórfica con todos los dispositivos del sistema.
+     */
+    public List<IDispositivo> getDispositivos() {
+        List<IDispositivo> dispositivos = new ArrayList<>();
+        dispositivos.addAll(sensores);
+        dispositivos.addAll(actuadores);
+        return dispositivos;
     }
 
     /**

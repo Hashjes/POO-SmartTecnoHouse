@@ -127,13 +127,16 @@ public class SmartTecnoHouseController {
      * Guarda el estado persistente y el log de actuadores.
      */
     public void guardarEstado() {
-        try {
-            persistenciaService.guardarEstado(modelo);
-            guardarActuatorLog();
+        if (guardarEstadoSilencioso()) {
             vista.mostrarMensaje("Estado guardado correctamente.");
-        } catch (IOException e) {
-            vista.mostrarError("No se pudo guardar el estado: " + e.getMessage());
         }
+    }
+
+    /**
+     * Guarda el estado al cerrar la aplicación sin mostrar mensaje de éxito.
+     */
+    public void guardarEstadoAlSalir() {
+        guardarEstadoSilencioso();
     }
 
     /**
@@ -151,5 +154,16 @@ public class SmartTecnoHouseController {
 
     private void guardarActuatorLog() throws IOException {
         Files.write(Path.of("actuators.log"), modelo.getActuatorLog());
+    }
+
+    private boolean guardarEstadoSilencioso() {
+        try {
+            persistenciaService.guardarEstado(modelo);
+            guardarActuatorLog();
+            return true;
+        } catch (IOException e) {
+            vista.mostrarError("No se pudo guardar el estado: " + e.getMessage());
+            return false;
+        }
     }
 }
