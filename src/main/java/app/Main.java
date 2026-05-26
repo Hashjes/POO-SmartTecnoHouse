@@ -1,3 +1,5 @@
+package app;
+
 import controlador.SmartTecnoHouseController;
 import modelo.PersistenciaService;
 import modelo.SmartTecnoHouse;
