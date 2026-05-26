@@ -1,0 +1,12 @@
+{
+  "actuadores": {
+    "bulb": "OFF",
+    "fan": "OFF",
+    "plug": "OFF"
+  },
+  "reglas": {
+    "R1": true,
+    "R2": true,
+    "R3": false
+  }
+}
