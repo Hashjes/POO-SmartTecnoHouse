@@ -153,6 +153,10 @@ public class SmartTecnoHouseController {
     }
 
     private void guardarActuatorLog() throws IOException {
+        if (modelo.getActuatorLog().isEmpty()) {
+            return;
+        }
+
         Files.write(Path.of("actuators.log"), modelo.getActuatorLog());
     }
 
