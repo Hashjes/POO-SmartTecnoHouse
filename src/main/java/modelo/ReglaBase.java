@@ -6,8 +6,11 @@ package modelo;
  */
 public abstract class ReglaBase implements Regla {
 
+    /** Identificador único de la regla. */
     protected String id;
+    /** Nombre legible de la regla. */
     protected String nombre;
+    /** Indica si la regla está activa. */
     protected boolean activa;
 
     /**

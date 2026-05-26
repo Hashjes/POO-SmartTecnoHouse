@@ -6,11 +6,17 @@ package modelo;
  */
 public abstract class Sensor implements IDispositivo {
 
+    /** Identificador único del sensor. */
     protected String id;
+    /** Nombre legible del sensor. */
     protected String nombre;
+    /** Unidad de medida del sensor. */
     protected String unidad;
+    /** Último valor leído por el sensor. */
     protected double valor;
+    /** Valor mínimo permitido por el sensor. */
     protected double minimo;
+    /** Valor máximo permitido por el sensor. */
     protected double maximo;
 
     /**

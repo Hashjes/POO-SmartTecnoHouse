@@ -5,6 +5,9 @@ package modelo;
  */
 public class SensorLuz extends Sensor {
 
+    /**
+     * Crea un sensor de luz con ID light, unidad lux y rango [0, 1000].
+     */
     public SensorLuz() {
         super("light", "Sensor de Luz", "lux", 0, 1000);
     }

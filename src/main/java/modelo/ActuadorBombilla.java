@@ -5,6 +5,9 @@ package modelo;
  */
 public class ActuadorBombilla extends Actuador {
 
+    /**
+     * Crea una bombilla con estado inicial OFF.
+     */
     public ActuadorBombilla() {
         super("bulb", "Bombilla", "OFF");
     }

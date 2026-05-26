@@ -8,8 +8,13 @@ import java.util.Arrays;
  */
 public abstract class Actuador implements IDispositivo {
 
+    /** Identificador único del actuador. */
     protected String id;
+
+    /** Nombre legible del actuador. */
     protected String nombre;
+
+    /** Estado actual del actuador. */
     protected String estadoActual;
 
     /**

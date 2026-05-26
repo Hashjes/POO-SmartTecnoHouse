@@ -54,18 +54,38 @@ public class SmartTecnoHouse {
         reglas.add(new ReglaAhorroNocturno());
     }
 
+    /**
+     * Devuelve la lista de sensores registrados en el sistema.
+     *
+     * @return lista de sensores.
+     */
     public List<Sensor> getSensores() {
         return sensores;
     }
 
+    /**
+     * Devuelve la lista de actuadores registrados en el sistema.
+     *
+     * @return lista de actuadores.
+     */
     public List<Actuador> getActuadores() {
         return actuadores;
     }
 
+    /**
+     * Devuelve la lista de reglas configuradas en el sistema.
+     *
+     * @return lista de reglas.
+     */
     public List<Regla> getReglas() {
         return reglas;
     }
 
+    /**
+     * Devuelve el log de acciones ejecutadas sobre actuadores.
+     *
+     * @return lista de líneas del log.
+     */
     public List<String> getActuatorLog() {
         return actuatorLog;
     }

@@ -5,6 +5,9 @@ package modelo;
  */
 public class ActuadorEnchufe extends Actuador {
 
+    /**
+     * Crea un enchufe inteligente con estado inicial OFF.
+     */
     public ActuadorEnchufe() {
         super("plug", "Enchufe Inteligente", "OFF");
     }

@@ -2,10 +2,14 @@ package modelo;
 
 /**
  * R2. Iluminación automática:
- * si la luminosidad es baja (<300 lux) y hay presencia, la bombilla se enciende.
+ * si la luminosidad es baja ({@code light < 300}) y hay presencia,
+ * la bombilla se enciende.
  */
 public class ReglaIluminacionAutomatica extends ReglaBase {
 
+    /**
+     * Crea la regla R2 activa por defecto.
+     */
     public ReglaIluminacionAutomatica() {
         super("R2", "Iluminación automática", true);
     }

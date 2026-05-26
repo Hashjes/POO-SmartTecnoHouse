@@ -5,6 +5,9 @@ package modelo;
  */
 public class SensorTemperatura extends Sensor {
 
+    /**
+     * Crea un sensor de temperatura con ID temp, unidad °C y rango [-20, 50].
+     */
     public SensorTemperatura() {
         super("temp", "Sensor de Temperatura", "°C", -20, 50);
     }

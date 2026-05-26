@@ -7,6 +7,9 @@ package modelo;
  */
 public class ReglaAhorroNocturno extends ReglaBase {
 
+    /**
+     * Crea la regla R3 desactivada por defecto.
+     */
     public ReglaAhorroNocturno() {
         super("R3", "Ahorro nocturno", false);
     }

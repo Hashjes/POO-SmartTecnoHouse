@@ -6,6 +6,9 @@ package modelo;
  */
 public class ReglaVentilacionConfortable extends ReglaBase {
 
+    /**
+     * Crea la regla R1 activa por defecto.
+     */
     public ReglaVentilacionConfortable() {
         super("R1", "Ventilación confortable", true);
     }

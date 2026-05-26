@@ -5,6 +5,9 @@ package modelo;
  */
 public class ActuadorVentilador extends Actuador {
 
+    /**
+     * Crea un ventilador con estado inicial OFF.
+     */
     public ActuadorVentilador() {
         super("fan", "Ventilador", "OFF");
     }

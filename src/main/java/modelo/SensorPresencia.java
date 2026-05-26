@@ -5,6 +5,9 @@ package modelo;
  */
 public class SensorPresencia extends Sensor {
 
+    /**
+     * Crea un sensor de presencia con ID pir y valores posibles 0/1.
+     */
     public SensorPresencia() {
         super("pir", "Sensor de Presencia", "boolean", 0, 1);
     }
