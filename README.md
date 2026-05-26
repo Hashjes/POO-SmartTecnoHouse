@@ -24,16 +24,14 @@ Aplicación Java con interfaz gráfica Swing para simular un sistema domótico I
 
 ```bash
 mvn clean package
-mvn exec:java -Dexec.mainClass=Main
+mvn exec:java
 ```
-
-Si no se usa el plugin de ejecución, también puede iniciarse desde el IDE ejecutando la clase `Main`.
 
 ## Entregables
 
-- Código fuente Java en `src/main/java`.
-- Documentación automática en `docs/`.
-- Memoria-manual en `docs/memoria-manual.md`.
-- Chuleta de Git en `docs/cheatsheet-git.md`.
+- Código fuente Java se encuentra en `src/main/java`.
+- Documentación automática Javadoc en `docs/`.
+- Memoria-manual en PDF/DOCX.
+- Cheatsheet de Git en PDF.
 - Persistencia de ejemplo en `data/state.json`.
 - Log de ejemplo en `actuators.log`.
