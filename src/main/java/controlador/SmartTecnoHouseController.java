@@ -1,5 +1,6 @@
 package controlador;
 
+import com.google.gson.JsonSyntaxException;
 import modelo.Actuador;
 import modelo.PersistenciaService;
 import modelo.Regla;
@@ -44,7 +45,7 @@ public class SmartTecnoHouseController {
     public void iniciar() {
         try {
             persistenciaService.cargarEstado(modelo);
-        } catch (IOException e) {
+        } catch (IOException | IllegalArgumentException | JsonSyntaxException e) {
             vista.mostrarError("No se pudo cargar el estado inicial: " + e.getMessage());
         }
 
@@ -147,7 +148,7 @@ public class SmartTecnoHouseController {
             persistenciaService.cargarEstado(modelo);
             vista.refrescar(modelo);
             vista.mostrarMensaje("Estado cargado correctamente.");
-        } catch (IOException e) {
+        } catch (IOException | IllegalArgumentException | JsonSyntaxException e) {
             vista.mostrarError("No se pudo cargar el estado: " + e.getMessage());
         }
     }
