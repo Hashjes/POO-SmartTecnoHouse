@@ -32,7 +32,7 @@ mvn exec:java
 ```
 Opcionalmente, también se puede ejecutar el programa desde un IDE ejecutando la clase app.Main
 
-## Contenido del repositorio
+## Contenido del repositorio relevante
 
 - Código fuente de Java localizado en "src/main/java".
 - La documentación automática de Javadoc se encuentra en "docs/".
