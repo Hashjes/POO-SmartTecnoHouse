@@ -14,7 +14,7 @@ Se trata de una aplicación Java con interfaz gráfica en Swing que simula un si
 - Sensor extra añadido: humedad (humidity).
 - Actuadores base (presentes en el primer proyecto): bombilla (bulb) y ventilador (fan).
 - Actuador extra añadido: enchufe inteligente (plug).
-- Interfaz "IDispositivo" y clases abstractas Sensor y Actuador.
+- Para la interfaz se ha creado "IDispositivo" y para las clases abstractas "Sensor" y "Actuador".
 - El Patrón Strategy se emplea en la interfaz "Regla" y sus implementaciones.
 - Se emplea el Patrón MVC con los paquetes denominados: modelo, vista y controlador.
 - Se ha empleado el patrón Singleton como se recomienda en el apartado de diseño para el modelo principal "SmartTecnoHouse".
